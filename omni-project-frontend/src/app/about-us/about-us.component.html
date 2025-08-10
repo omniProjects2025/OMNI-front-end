@@ -683,16 +683,16 @@
   </section>
 </ng-container>
 <ng-container *ngIf="selected_team==2">
-  <div class="container py-5">
+  <div class="container py-5 overflow_hidden" >
     <div class="row align-items-center mb-5" *ngFor="let leader of leadershipTeam; let i = index">
-      <div class="col-md-4 mb-3 mb-md-0" [ngClass]="{'order-md-2': i % 2 !== 0}">
+      <div class="col-md-3 mb-3 mb-md-0" [ngClass]="{'order-md-2': i % 2 !== 0}">
         <div class="profile-img-container position-relative mx-auto">
           <img src="assets/about_us/{{i % 2 == 0 ? 'left_circle.svg' : 'right_circle_chairman.svg'}}"
-            class="half-circle-bg" alt="Background ring">
+            class="half-circle-bg {{i % 2 == 0 ? 'half_circle_img_right': 'half_circle_img_left' }}" alt="Background ring">
           <img [src]="leader.img" alt="{{ leader.name }}" class="img-fluid rounded-circle shadow profile-img">
         </div>
       </div>
-      <div class="col-md-8" [ngClass]="{'order-md-1': i % 2 !== 0}">
+      <div class="col-md-9" [ngClass]="{'order-md-1': i % 2 !== 0}">
         <div class="text-center" [ngClass]="i % 2 == 0 ? 'text-md-start' : 'text-md-end'">
           <h5 class="text_success fw-bold mb-0">{{ leader.name }}</h5>
           <p class="dep_text fw-semibold mb-2">{{ leader.designation }}</p>

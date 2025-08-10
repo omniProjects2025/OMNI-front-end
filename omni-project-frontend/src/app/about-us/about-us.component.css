@@ -437,12 +437,19 @@ p {
 .half-circle-bg {
   position: absolute;
   top: 0;
-  left: 0;
   width: 230px;
   height: 230px;
   z-index: 1;
 }
-
+.half_circle_img_left{
+  left:25px
+}
+.half_circle_img_right{
+  right:55px
+}
+.overflow_hidden {
+  overflow: hidden;
+}
 .profile-img {
   width: 160px;
   height: 160px;
